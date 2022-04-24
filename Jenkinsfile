@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker container run  '
+                sh 'go build'
             }
         }
         stage('Test') {
