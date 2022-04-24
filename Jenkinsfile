@@ -1,10 +1,11 @@
 pipeline {
     agent any
     tools {
-        go 'go1.14'
+        // See https://levelup.gitconnected.com/automating-build-and-test-of-go-application-with-jenkins-9f96879b5479
+        go 'Go 1.17'
     }
      environment {
-        GO114MODULE = 'on'
+        GO117MODULE = 'on'
         CGO_ENABLED = 0 
         GOPATH = "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/${BUILD_ID}"
     }
